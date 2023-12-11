@@ -1,0 +1,25 @@
+<div class="container p-5">
+    <main class="form-signin w-100 m-auto">
+        <form [formGroup]="formAuth" (ngSubmit)="signIn()">
+            <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+
+            <h1 class="h3 mb-3 fw-normal"> Iniciar sesión </h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="51999999999" formControlName="phone">
+                <label for="floatingInput"> Número de teléfono </label>
+                <button class="btn btn-primary" type="button" (click)="sendCode()">
+                    Solicitar código
+                </button>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Código de verificación" formControlName="phoneCode">
+                <label for="floatingPassword"> Código de verificación </label>
+            </div>
+
+            <button class="btn btn-primary w-100 py-2" type="submit"> Iniciar sesión </button>
+        </form>
+    </main>
+
+</div>

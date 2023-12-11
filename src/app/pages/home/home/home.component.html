@@ -1,0 +1,34 @@
+<div class="row p-5">
+    <label for=""> CONTACTOS </label>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <ng-container *ngFor="let contact of contacts">
+            <div class="col">
+                <div class="card h-100" (click)="goToMessages(contact)">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ contact.username }}</h5>
+                        <p class="card-text">
+                            {{ contact.first_name }} {{ contact.last_name }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+
+    <label for=""> GRUPOS </label>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <ng-container *ngFor="let group of groups">
+            <div class="col">
+                <div class="card h-100" (click)="goToGroups(group)">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ group.title }}</h5>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+
+</div>
