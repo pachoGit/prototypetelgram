@@ -15,6 +15,14 @@ export class ApiContactsTelegramService {
     return this.apiCoreTelegram.call('channels.getGroupsForDiscussion');
   }
 
+  async getDialogs(): Promise<any> {
+    return this.apiCoreTelegram.call('messages.getDialogs', {
+      offset_peer: {
+        _: 'inputPeerSelf',
+      },
+    });
+  }
+
   async getUsers(ids: any[]) {
     const id = ids.map((i: any) => {
       return {

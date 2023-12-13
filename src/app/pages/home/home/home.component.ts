@@ -22,9 +22,14 @@ export class HomeComponent implements OnInit {
       console.log(this.contacts);
     });
 
-    this.apiContactsTelegram.getGroups().then((result) => {
+    // this.apiContactsTelegram.getGroups().then((result) => {
+    //   this.groups = result.chats;
+    //   console.log(this.groups);
+    // });
+
+    this.apiContactsTelegram.getDialogs().then((result) => {
       this.groups = result.chats;
-      console.log(this.groups);
+      console.log({ result });
     });
   }
 
